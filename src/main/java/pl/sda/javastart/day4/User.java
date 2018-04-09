@@ -19,7 +19,7 @@ public class User {
         return "User{" +
                 "name='" + name + '\'' +
                 ", login='" + login + '\'' +
-                ", password='" + password + '\'' +
+                ", password='" + "******" + '\'' +
                 '}';
     }
 

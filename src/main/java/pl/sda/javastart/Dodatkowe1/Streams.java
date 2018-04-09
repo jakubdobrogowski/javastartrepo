@@ -1,6 +1,7 @@
 package pl.sda.javastart.Dodatkowe1;
 
 import org.junit.jupiter.api.Test;
+import pl.sda.javastart.day3.Person;
 
 import java.util.Arrays;
 import java.util.List;

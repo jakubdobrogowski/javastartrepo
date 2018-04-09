@@ -10,6 +10,7 @@ public class OOP2 {
         System.out.println(userTwo.equals(userThree));
         System.out.println(userTwo==userThree);
 
+        System.out.println(userOne);
 
     }
 }
