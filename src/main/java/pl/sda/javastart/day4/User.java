@@ -26,8 +26,8 @@ public class User {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false; //porownanie klass
-        User user = (User) o;
+        if (o == null || getClass() != o.getClass()) return false; //porownanie klass, Po sprawdzeniu możemy  rzutować.
+        User user = (User) o;  //rzutowanie objektu "o" klasy Object
         return Objects.equals(login, user.login);
     }
 

@@ -1,11 +1,13 @@
 package pl.sda.javastart.day3;
 
 import org.apache.commons.lang3.StringUtils;
+import pl.sda.javastart.Homework.ExerciseTwo.OwnerHolder;
+import pl.sda.javastart.day4.Worker;
 
 import java.time.LocalDateTime;
 import java.util.Arrays;
 
-public class Car {
+public class Car implements OwnerHolder {
 
     private String model;
     private String manufacturer;
@@ -17,12 +19,18 @@ public class Car {
     private String[] options;
     private int doorsNumber;
 
-    public final Person owner = new Person("Andrzej");
+
+
+    public final Person owner = new Worker("Andrzej", "Nowak", 23, 1000, "Physical");
+    // tworzymy obiekt klasy Person z modyfikatorem final
+
+    public final Player jakub = new Player("soczek234", "elf");
 
     public static int carsCounter;
 
     public static final int WHEELS_NUMBER = 4;
 
+    public final int LOL = 5;
 
     public static String sound() {
 
@@ -161,8 +169,17 @@ public class Car {
         this.doorsNumber = doorsNumber;
     }
 
-    public Person getOwner() {
+    public Person getOwner() {  //getter
         return owner;
+    }
+
+    public Player getJakub() {
+        return jakub;
+    }
+
+    @Override
+    public String getOwnerName() {
+        return this.getOwner().getName();
     }
 }
 

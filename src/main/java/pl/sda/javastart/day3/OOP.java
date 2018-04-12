@@ -5,21 +5,39 @@ public class OOP {
 
     public static void main(String[] args) {
 
-        cars();
+        // cars();
         //referencesExample();
         //staticExample();
         //finalExamples();
+        finalChange();
+    }
 
+    private static void finalChange() {
+
+        Car newCarsPlayer = new Car();
+
+        newCarsPlayer.getJakub().setCharacter("Nord");
+        System.out.println(newCarsPlayer.getJakub());
     }
 
     private static void finalExamples() {
         //Car.WHEELS_NUMBER = 3;
         System.out.println(Car.WHEELS_NUMBER);
-        Car car = new Car();
-        System.out.println(car.getOwner().getName());
 
+        Car car = new Car();
+
+        System.out.println(car.LOL);
+
+        System.out.println(car.getOwner().getName());
         car.getOwner().setName("Marian");
         System.out.println(car.getOwner().getName());
+
+        Car secondCar = new Car();
+        secondCar.getOwner().setSurName("Błaszczykowsi-ski-ski");
+        car=secondCar;
+        System.out.println(car.getOwner().getSurName() +car.getOwner().getName() );
+
+
     }
 
     private static void staticExample() {
@@ -84,4 +102,5 @@ public class OOP {
         myFirstCar.setColoure("White");
         System.out.println(myFirstCar);
     }
+
 }

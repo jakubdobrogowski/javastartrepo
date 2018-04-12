@@ -4,13 +4,14 @@ public class OOP2 {
 
     public static void main(String[] args) {
 
-        User userOne = new User("Andrzej", "Andrzej1910", "andzrej");
-        User userTwo = new User("Roman", "romekatomek12", "12345");
-        User userThree = new User("Roman", "romekatomek12", "12345");
-        System.out.println(userTwo.equals(userThree));
-        System.out.println(userTwo==userThree);
-
-        System.out.println(userOne);
+        User firstUser = new User("Roman", "romekatomek12", "12345");
+        User secondUser = new User("Roman", "romekatomek12", "12345");
+        System.out.println(firstUser.equals(secondUser));
+        System.out.println(firstUser.equals(""));
+        System.out.println(firstUser==secondUser);
+        System.out.println(firstUser.toString());
+        System.out.println(firstUser);
+        System.out.println(firstUser);
 
     }
 }

@@ -2,7 +2,7 @@ package pl.sda.javastart.day4;
 
 import pl.sda.javastart.day3.Person;
 
-public class Student extends Person implements WorkingPerson, FaltinfoHolder{
+public class Student extends Person implements WorkingPerson, FaltinfoHolder {
 
     private int index;
     private double scoolarship;
@@ -21,17 +21,31 @@ public class Student extends Person implements WorkingPerson, FaltinfoHolder{
                 "index=" + index +
                 ", scoolarship=" + scoolarship +
                 ", fromMom=" + fromMom +
-                '}';
+                ' ';
+    }
+
+    @Override
+    protected boolean isParenthesisNeeded() {
+        return false;
     }
 
     @Override
     public double getIncome() {
         return fromMom + scoolarship;
 
-
     }
 
-    public int getIndex () {
+    public int getIndex() {
         return index;
+    }
+
+    @Override
+    public String getStreetPrefix() {
+        return "";
+    }
+
+    @Override
+    public String getFlatInfo() {
+        return "Włókniarzy - u cioci";
     }
 }

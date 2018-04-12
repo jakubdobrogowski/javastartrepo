@@ -16,8 +16,7 @@ public class ObjectFieldChanging {
     }
 
     private static void changingObjectInternalsByReferences() {
-        ExperimentalObject reference1 =
-                new ExperimentalObject(123);
+        ExperimentalObject reference1 = new ExperimentalObject(123);
         ExperimentalObject reference2 = reference1;
         System.out.println(reference1.getAttribute());
         System.out.println(reference2.getAttribute());

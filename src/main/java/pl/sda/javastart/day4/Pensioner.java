@@ -9,14 +9,18 @@ public class Pensioner extends Person {
     public Pensioner(String name, String surName, int age, double pension) {
         super(name, surName, age);
         this.pension = pension;
-
     }
 
     @Override
     public String toString() {
-        return super.toString()  +
+        return super.toString() +
                 "pension=" + pension +
-                '}';
+                ' ';
+    }
+
+    @Override
+    protected boolean isParenthesisNeeded() {
+        return false;
     }
 
     @Override
@@ -24,8 +28,7 @@ public class Pensioner extends Person {
         return pension;
     }
 
-    public double getPension(){
-
+    public double getPension() {
         return pension;
     }
 }

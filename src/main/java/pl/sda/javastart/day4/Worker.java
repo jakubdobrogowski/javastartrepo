@@ -2,7 +2,7 @@ package pl.sda.javastart.day4;
 
 import pl.sda.javastart.day3.Person;
 
-public class Worker extends Person {
+public  class Worker extends Person {
 
     private double salary;
     private String position;
@@ -18,7 +18,12 @@ public class Worker extends Person {
         return super.toString() +
                 "salary=" + salary +
                 ", position='" + position + '\'' +
-                '}';
+                ' ';
+    }
+
+    @Override
+    protected boolean isParenthesisNeeded() {
+        return false;
     }
 
     @Override

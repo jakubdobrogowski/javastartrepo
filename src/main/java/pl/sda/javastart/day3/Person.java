@@ -1,15 +1,12 @@
 package pl.sda.javastart.day3;
 
 public abstract class Person {
-
-    private Integer id;
     private String name;
     private String surName;
     private Integer age;
 
 
-    public Person(Integer id, String name, String surName, Integer age) {
-        this.id = id;
+    public Person( String name, String surName, Integer age) {
         this.name = name;
         this.surName = surName;
         this.age = age;
@@ -19,22 +16,9 @@ public abstract class Person {
         this.name = name;
         }
 
-    public Person(String name, String surName, int age) {
-        this.name = name;
-        this.surName = surName;
-        this.age = age;
-    }
-
 
     public abstract double getIncome();
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     public String getName() {
         return name;
@@ -44,28 +28,26 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String getLastName() {
+    public String getSurName() {
         return surName;
     }
 
-    public void setLastName(String lastName) {
+    public void setSurName(String lastName) {
         this.surName = lastName;
     }
 
-    public Integer getAge() {
+    public Integer getAge() {  // czemu tu jest duży int?
         return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
     }
 
     @Override
     public String toString() {
         return this.getClass().getSimpleName() +
-                "{name='" + name + '\'' +
+                " name='" + name + '\'' +
                 ", surName='" + surName + '\'' +
-                ", age=" + age +
-                '}';
+                ", age=" + age
+                + (isParenthesisNeeded() ? ")" : " ");
     }
+
+    protected abstract boolean isParenthesisNeeded();
 }
