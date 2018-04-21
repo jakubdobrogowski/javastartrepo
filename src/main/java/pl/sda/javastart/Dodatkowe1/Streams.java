@@ -15,7 +15,7 @@ public class Streams {
             // new Person(3, "Marek", "Nowak", 25),
             //new Person(4, "Adam", "Twardowski", 33),
             // new Person(5, "Monika", "Kos", 25),
-            //  new Person(6, "Adam", "Rudy", 45),
+            //3  new Person(6, "Adam", "Rudy", 45),
             //  new Person(7, "Marek", "Rudy", 15)
     );
 
